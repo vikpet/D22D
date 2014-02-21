@@ -8,6 +8,7 @@ public class Mob : MonoBehaviour {
 	public float speed;
 	public float range;
 	public float aggroRange;
+	public float attackCone = 10;
 	public CharacterController controller;
 
 	private UISlider healthBar;
@@ -47,9 +48,9 @@ public class Mob : MonoBehaviour {
 	{
 		if(!isDead ())
 		{
-			if(!inRange() && inAggroRange())
+			if(!inRange() && inAggroRange() && !animation.IsPlaying(attackClip.name))
 			{
-				chase ();
+					chase ();
 			}
 			else
 			{
@@ -78,16 +79,19 @@ public class Mob : MonoBehaviour {
 		if(animation[attackClip.name].time > animation[attackClip.name].length*impactTime && !impacted && animation[attackClip.name].time<0.9*animation[attackClip.name].length)
 		{
 
-			transform.LookAt(player.position);
 			if(bIsRanged)
 			{
 				Instantiate (projectilePrefab, new Vector3(transform.position.x, transform.position.y+projectileOffset, transform.position.z), transform.rotation);
 			}
 			else
 			{
+				if(CanSeePlayer ())
+				{
 				opponent.getHit(damage);
+				}
 			}
 			impacted = true;
+			transform.LookAt(player.position);
 		}
 	}
 
@@ -166,5 +170,38 @@ public class Mob : MonoBehaviour {
 		
 		healthBar.ForceUpdate();
 	}
+
+	bool CanSeePlayer()
+	{
+		RaycastHit hit;
+		Vector3 rayDirection = player.transform.position - transform.position;
+
+		if((Vector3.Angle (rayDirection, transform.forward)) < attackCone)
+		{
+			/**
+			if(Physics.Raycast (transform.position, rayDirection, out hit, range))
+			{
+				if(hit.collider.tag == "Player")
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
+			**/
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+
 
 }
