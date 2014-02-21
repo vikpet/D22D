@@ -46,9 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ClickToMove.cs" />
-     <Compile Include="Assets\Enemy_Projectiles.cs" />
-     <Compile Include="Assets\Mob.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\LanguageSelection.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\UIButton.cs" />
      <Compile Include="Assets\NGUI\Scripts\Interaction\UIButtonColor.cs" />
@@ -108,9 +105,12 @@
      <Compile Include="Assets\NGUI\Scripts\UI\UITiledSprite.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UITooltip.cs" />
      <Compile Include="Assets\NGUI\Scripts\UI\UIViewport.cs" />
-     <Compile Include="Assets\Player_Projectiles.cs" />
-     <Compile Include="Assets\Soldier.cs" />
-     <Compile Include="Assets\UIFollowTarget.cs" />
+     <Compile Include="Assets\SCRIPTS\Enemies\Enemy_Projectiles.cs" />
+     <Compile Include="Assets\SCRIPTS\Enemies\Mob.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\ClickToMove.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\Player_Projectiles.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\Soldier.cs" />
+     <Compile Include="Assets\SCRIPTS\UIFollowTarget.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Depth.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />

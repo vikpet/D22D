@@ -4,10 +4,13 @@ using System.Collections;
 public class Mob : MonoBehaviour {
 
 	public int health;
+	private int maxHealth;
 	public float speed;
 	public float range;
 	public float aggroRange;
 	public CharacterController controller;
+
+	private UISlider healthBar;
 
 	public float projectileOffset;
 
@@ -33,7 +36,10 @@ public class Mob : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		maxHealth = health;
 		opponent = player.GetComponent<Soldier> ();
+
+		healthBar = transform.FindChild("HealthBar").GetComponent<UISlider>();
 	}
 	
 	// Update is called once per frame
@@ -156,6 +162,9 @@ public class Mob : MonoBehaviour {
 		{
 			health = 0;
 		}
+		healthBar.sliderValue = ((float) health) / ((float) maxHealth);
+		
+		healthBar.ForceUpdate();
 	}
 
 }

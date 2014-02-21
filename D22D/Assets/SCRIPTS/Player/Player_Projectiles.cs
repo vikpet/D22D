@@ -36,5 +36,9 @@ public class Player_Projectiles : MonoBehaviour {
 
 			}
 		}
+		if(other.tag == "Player")
+		{
+			Destroy(gameObject);
+		}
 	}
 }

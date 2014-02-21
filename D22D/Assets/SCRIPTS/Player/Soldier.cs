@@ -7,9 +7,9 @@ public class Soldier : MonoBehaviour {
 	public GameObject opponent;
 
 	public int health = 100;
-	public int maxHealth = 100;
+	private int maxHealth = 100;
 
-	public UISlider healthBar;
+	private UISlider healthBar;
 
 	public int damage;
 	public float attackSpeed;
@@ -30,6 +30,7 @@ public class Soldier : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
+		maxHealth = health;
 		animation[attack.name].speed = attackSpeed/10;
 		healthBar = transform.FindChild("HealthBar").GetComponent<UISlider>();
 	}
@@ -37,23 +38,13 @@ public class Soldier : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		Debug.Log (health);
-
-		randomAttackNumber = Mathf.Round ( Random.Range (1,2));
 
 		if(Input.GetKey(KeyCode.LeftShift) && Input.GetMouseButton(0))
 		{
-			if(randomAttackNumber <= 1 )
-			{
-				animation.Play(attack.name);
-			}
-			else
-			{
-				animation.Play(attack2.name);
-			}
-			ClickToMove.attack = true;
+			animation.Play(attack.name);
 
-		
+			ClickToMove.attack = true;
+				
 			if(opponent!=null&&!isRanged&&inRange ())
 			{
 				transform.LookAt (opponent.transform.position);
@@ -69,6 +60,7 @@ public class Soldier : MonoBehaviour {
 		impact();
 		dieMethod ();
 	}
+
 
 	void impact()
 	{

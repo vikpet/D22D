@@ -46,7 +46,8 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\ModularPlayer.js" />
+     <Compile Include="Assets\SCRIPTS\Player\ModularPlayer.js" />
+     <Compile Include="Assets\SCRIPTS\SmoothFollow.js" />
      <None Include="Assets\NGUI\Resources\Shaders\Depth.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />

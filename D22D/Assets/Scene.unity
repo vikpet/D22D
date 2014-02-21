@@ -891,7 +891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b12228fcbd9f7c4ab404413a6be97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
@@ -1938,7 +1938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
@@ -6693,8 +6693,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 389578162}
-  - {fileID: 1781316024}
   - {fileID: 532819066}
+  - {fileID: 1781316024}
   m_Father: {fileID: 0}
 --- !u!114 &585043960
 MonoBehaviour:
@@ -7383,6 +7383,14 @@ Prefab:
       propertyPath: mMat
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 280aa481d270d3e4d8f6e6cb1acae895, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1501368191}
+    - target: {fileID: 11400006, guid: 280aa481d270d3e4d8f6e6cb1acae895, type: 2}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1935292384}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 280aa481d270d3e4d8f6e6cb1acae895, type: 2}
   m_RootGameObject: {fileID: 1557474528}
@@ -7837,7 +7845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b12228fcbd9f7c4ab404413a6be97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
@@ -8334,7 +8342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
@@ -9639,7 +9647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
@@ -16381,8 +16389,8 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 711798733}
-  - {fileID: 2131267289}
   - {fileID: 1763606741}
+  - {fileID: 2131267289}
   m_Father: {fileID: 0}
 --- !u!114 &1330199957
 MonoBehaviour:
@@ -17209,7 +17217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b12228fcbd9f7c4ab404413a6be97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
@@ -17464,7 +17472,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b12228fcbd9f7c4ab404413a6be97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
@@ -17930,7 +17938,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
@@ -18534,8 +18542,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 749a24eb822d6d647b819b01b154fb31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  m_Camera: {fileID: 0}
+  target: {fileID: 1935292384}
+  m_Camera: {fileID: 1501368191}
   yOffset: 2
   disableIfInvisible: 1
 --- !u!114 &1557474531
@@ -21060,6 +21068,10 @@ Prefab:
       propertyPath: m_LightmapTilingOffset.y
       value: .283203125
       objectReference: {fileID: 0}
+    - target: {fileID: 6400000, guid: d1d4ebb00076c134f8433561c96583bd, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d1d4ebb00076c134f8433561c96583bd, type: 3}
   m_RootGameObject: {fileID: 1655758596}
@@ -22319,7 +22331,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b12228fcbd9f7c4ab404413a6be97f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 1
@@ -22762,7 +22774,7 @@ MeshCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_SmoothSphereCollisions: 0
-  m_Convex: 0
+  m_Convex: 1
   m_Mesh: {fileID: 4300000, guid: d1d4ebb00076c134f8433561c96583bd, type: 3}
 --- !u!23 &1875898109
 Renderer:
@@ -23810,7 +23822,6 @@ Transform:
   m_LocalPosition: {x: 93.2705383, y: .424516678, z: -51.1150131}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1557474529}
   - {fileID: 1162196607}
   - {fileID: 492488970}
   - {fileID: 67376415}
@@ -23832,6 +23843,7 @@ Transform:
   - {fileID: 990432855}
   - {fileID: 1522048610}
   - {fileID: 582339194}
+  - {fileID: 1557474529}
   m_Father: {fileID: 0}
 --- !u!111 &1935292385
 Animation:
@@ -23866,9 +23878,7 @@ MonoBehaviour:
   projectilePrefab: {fileID: 400000, guid: e3c9bef78182e814388ebe2e474cd1c7, type: 2}
   opponent: {fileID: 0}
   health: 100
-  maxHealth: 100
-  healthBar: {fileID: 0}
-  damage: 10
+  damage: 25
   attackSpeed: 20
   impactTime: .30000001192092896
   attack: {fileID: 7400000, guid: 48b641351072b36428b7aa510b39a942, type: 2}
@@ -24186,7 +24196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b3dc54f924693f41b5cbecb267e647a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mMat: {fileID: 0}
+  mMat: {fileID: 2100000, guid: c18eef84cc152af47a7cd1fd032b58fd, type: 2}
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
   mDepth: 0
