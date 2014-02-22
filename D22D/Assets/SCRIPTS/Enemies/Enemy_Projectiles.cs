@@ -24,22 +24,18 @@ public class Enemy_Projectiles : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.tag == "Player")
+		if(other.gameObject.tag == "Player")
 		{
 			other.GetComponent<Soldier>().getHit (damage);
 			if(bDieOnCollision)
 			{
 			Destroy (gameObject);
 			}
-			else
-			{
 
-			}
 		}
-		else
+		if(other.gameObject.tag != "Player" && other.gameObject.tag != "Enemy")
 		{
 			Destroy(gameObject);
 		}
-
 	}
 }
