@@ -7,9 +7,12 @@ public class Mob : MonoBehaviour {
 	private int maxHealth;
 	public float speed;
 	public float range;
+	public float attackSpeed = 5;
 	public float aggroRange;
 	public float attackCone = 10;
 	public CharacterController controller;
+
+	public float rotationSpeed = 10;
 
 	private UISlider healthBar;
 
@@ -32,11 +35,14 @@ public class Mob : MonoBehaviour {
 	public Transform player;
 	private Soldier opponent;
 
-
+	private Quaternion _lookRotation;
+	private Vector3 _direction;
 
 	// Use this for initialization
 	void Start () 
 	{
+		animation[attackClip.name].speed = attackSpeed/10;
+
 		maxHealth = health;
 		opponent = player.GetComponent<Soldier> ();
 
@@ -48,25 +54,35 @@ public class Mob : MonoBehaviour {
 	{
 		if(!isDead ())
 		{
-			if(!inRange() && inAggroRange() && !animation.IsPlaying(attackClip.name))
-			{
-					chase ();
-			}
-			else
-			{
-				animation.CrossFade(idle.name);
-			}
-			if(inRange()) 
-			{
-				//animation.CrossFade(idle.name);
-				animation.Play(attackClip.name);
-				attack();
 
-				if(animation[attackClip.name].time > 0.9*animation[attackClip.name].length)
+
+				_direction = (player.position - transform.position);
+
+				_lookRotation = Quaternion.LookRotation (_direction);
+
+
+
+				if(!inRange() && inAggroRange() && !animation.IsPlaying(attackClip.name))
 				{
-					impacted = false;
+					chase ();
 				}
-			}
+				else
+				{
+					animation.CrossFade(idle.name);
+				}
+				if(inRange()) 
+				{
+					//animation.CrossFade(idle.name);
+					animation.Play(attackClip.name);
+					attack();
+
+					if(animation[attackClip.name].time > 0.9*animation[attackClip.name].length)
+					{
+					transform.rotation = Quaternion.Slerp (transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
+						impacted = false;
+					}
+				}
+			
 		}
 		else
 		{
@@ -91,7 +107,7 @@ public class Mob : MonoBehaviour {
 				}
 			}
 			impacted = true;
-			transform.LookAt(player.position);
+			//transform.LookAt(player.position);
 		}
 	}
 
@@ -123,7 +139,8 @@ public class Mob : MonoBehaviour {
 
 	void chase()
 	{
-		transform.LookAt(player.position);
+		transform.rotation = Quaternion.Slerp (transform.rotation, _lookRotation, Time.deltaTime * rotationSpeed);
+
 		controller.SimpleMove(transform.forward*speed);
 		animation.Play(run.name);
 	}

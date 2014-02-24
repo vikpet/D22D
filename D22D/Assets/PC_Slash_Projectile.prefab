@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2a9a2758bb73434e9d49d68c67dcad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  damage: 50
+  speed: 15
+  damage: 20
   lifeTime: .5
   attackTag: Enemy
   bDieOnCollision: 0

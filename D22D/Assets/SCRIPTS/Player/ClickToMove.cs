@@ -15,6 +15,7 @@ public class ClickToMove : MonoBehaviour {
 	
 	private bool rotateMouse;
 
+
 	// Use this for initialization
 	void Start () {
 	
@@ -45,6 +46,7 @@ public class ClickToMove : MonoBehaviour {
 		{
 			rotateMouse = true;
 			rotateToMouse ();
+		
 		}
 	}
 
@@ -94,7 +96,16 @@ public class ClickToMove : MonoBehaviour {
 		{
 			if(hit.collider.tag!="Player")
 			{
-				position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+
+				if(hit.collider.tag=="Enemy")
+				{
+					position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+				}
+				else
+				{
+					position = new Vector3(hit.point.x, hit.point.y, hit.point.z-0.8f);
+				}
+				Debug.Log (position);
 
 				Quaternion newRotation = Quaternion.LookRotation(position-transform.position);
 				

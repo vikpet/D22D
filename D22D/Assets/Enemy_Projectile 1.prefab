@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
-  damage: 50
+  damage: 25
   lifeTime: 2
   attackTag: Player
   bDieOnCollision: 1

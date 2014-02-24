@@ -51,7 +51,18 @@ public class Soldier : MonoBehaviour {
 			}
 		}
 
-		if(animation[attack.name].time>0.8*animation[attack.name].length)
+		if(Input.GetKey(KeyCode.LeftShift) && Input.GetMouseButton(1))
+		{
+			animation.Play(attack2.name);
+			
+			ClickToMove.attack = true;
+			
+			if(opponent!=null&&!isRanged&&inRange ())
+			{
+				transform.LookAt (opponent.transform.position);
+			}
+		}
+		if(animation[attack.name].time>0.8*animation[attack.name].length || animation[attack2.name].time>0.8*animation[attack2.name].length)
 		{
 			ClickToMove.attack = false;
 			impacted = false;
