@@ -144,6 +144,7 @@ MonoBehaviour:
   damage: 25
   lifeTime: .75
   attackTag: Enemy
+  enemyImpactEffect: {fileID: 100000, guid: 1f2b270a6c94200418b1a6e341c775d3, type: 2}
   bDieOnCollision: 1
 --- !u!1001 &100100000
 Prefab:

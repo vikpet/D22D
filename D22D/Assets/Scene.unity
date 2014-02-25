@@ -5088,7 +5088,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 133562957}
@@ -12660,7 +12660,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 408408025}
@@ -13615,7 +13615,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 422170221}
@@ -14667,7 +14667,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 452444324}
@@ -25842,7 +25842,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 834300752}
@@ -31534,7 +31534,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 1023618095}
@@ -45445,7 +45445,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 1480847336}
@@ -46980,7 +46980,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 1523681612}
@@ -51275,7 +51275,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 1626146532}
@@ -59891,7 +59891,7 @@ MonoBehaviour:
   health: 100
   speed: 4
   range: 2
-  attackSpeed: 10
+  attackSpeed: 2
   aggroRange: 30
   attackCone: 30
   controller: {fileID: 1899659751}
@@ -60958,6 +60958,7 @@ GameObject:
   - 114: {fileID: 1935292386}
   - 114: {fileID: 1935292388}
   - 114: {fileID: 1935292389}
+  - 114: {fileID: 1935292390}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -61028,18 +61029,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175299e44829fbe429a21dd8bb375de8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 400000, guid: 90bea361d31c0ce439fffab3578ca0e7, type: 2}
   opponent: {fileID: 0}
   health: 100
-  damage: 25
-  attackSpeed: 40
+  attackSpeed: 25
   impactTime: .30000001192092896
   attack: {fileID: 7400000, guid: 48b641351072b36428b7aa510b39a942, type: 2}
   attack2: {fileID: 7400000, guid: dfe422568539f864b99f2ff6d7e731e5, type: 2}
   die: {fileID: 0}
   meleeRange: 2
   projectileOffset: 1
-  isRanged: 1
 --- !u!143 &1935292387
 CharacterController:
   m_ObjectHideFlags: 0
@@ -61088,6 +61086,24 @@ MonoBehaviour:
   mClipping: 0
   mClipRange: {x: 0, y: 0, z: 0, w: 0}
   mClipSoftness: {x: 40, y: 40}
+--- !u!114 &1935292390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1935292383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b029165faf91a134eabad5699a80a11a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityKeybind: Ability_01
+  animation: {fileID: 7400000, guid: 48b641351072b36428b7aa510b39a942, type: 2}
+  damageStat: Strength
+  damageScaling: 2
+  projectilePrefab: {fileID: 400000, guid: 90bea361d31c0ce439fffab3578ca0e7, type: 2}
+  bIsRanged: 1
+  player: {fileID: 1935292384}
 --- !u!1 &1937070279
 GameObject:
   m_ObjectHideFlags: 0

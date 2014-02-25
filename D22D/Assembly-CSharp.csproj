@@ -110,6 +110,7 @@
      <Compile Include="Assets\SCRIPTS\Player\ClickToMove.cs" />
      <Compile Include="Assets\SCRIPTS\Player\Player_Projectiles.cs" />
      <Compile Include="Assets\SCRIPTS\Player\Soldier.cs" />
+     <Compile Include="Assets\SCRIPTS\Player\TestAbility.cs" />
      <Compile Include="Assets\SCRIPTS\UIFollowTarget.cs" />
      <None Include="Assets\NGUI\Resources\Shaders\Depth.shader" />
      <None Include="Assets\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />

@@ -11,6 +11,7 @@ public class ClickToMove : MonoBehaviour {
 	
 	private Vector3 position;
 
+	private Vector3 aimPosition;
 	public static bool attack;
 	
 	private bool rotateMouse;
@@ -31,22 +32,22 @@ public class ClickToMove : MonoBehaviour {
 	void Update () 
 	{
 
-		if(!attack&&!Input.GetKey (KeyCode.LeftShift))
+		if(!attack && !Input.GetKey (KeyCode.LeftShift))
 		{
-			if(Input.GetMouseButton(0)&&!Input.GetKey (KeyCode.LeftShift))
+			if(Input.GetMouseButton(0))
 			{
 			//Locate position of click
 				locatePosition();
-
 			}
-			//Move player
 			moveToPosition();
 		}
-		if(attack)
+		if(attack | Input.GetKey (KeyCode.LeftShift))
 		{
 			rotateMouse = true;
 			rotateToMouse ();
-		
+			//Reset position so we don't keep stuttering
+			position = transform.position;
+			moveToPosition();
 		}
 	}
 
@@ -99,15 +100,15 @@ public class ClickToMove : MonoBehaviour {
 
 				if(hit.collider.tag=="Enemy")
 				{
-					position = new Vector3(hit.point.x, hit.point.y, hit.point.z);
+					aimPosition = new Vector3(hit.point.x, hit.point.y, hit.point.z);
 				}
 				else
 				{
-					position = new Vector3(hit.point.x, hit.point.y, hit.point.z-0.8f);
+					aimPosition = new Vector3(hit.point.x, hit.point.y, hit.point.z-0.8f);
 				}
 				Debug.Log (position);
 
-				Quaternion newRotation = Quaternion.LookRotation(position-transform.position);
+				Quaternion newRotation = Quaternion.LookRotation(aimPosition-transform.position);
 				
 				newRotation.x = 0f;
 				newRotation.z = 0f;
